@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'lexend';
+    src: url(Lexend/static/LexendDeca-Bold.ttf);
+}
+@font-face {
+    font-family: 'lexends';
+    src: url(Lexend/static/LexendDeca-Regular.ttf);
+}
+@font-face {
+    font-family: 'inter';
+    src: url(Inter/static/Inter-Regular.ttf);
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(233, 47%, 7%);
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px;
+    border-radius: 8px;
+    background-color: hsl(244, 38%, 16%);
+}
+div#left{
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+b#big{
+    font-size: 20px;
+    font-family: lexend;
+}
+b{
+    color: white;
+    font-size: 20px;
+}
+b.number{
+    text-transform: uppercase;
+    font-family: inter;
+}
+p#note{
+    margin-bottom: 14px;
+}
+p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 9px;
+    font-family: lexends;
+}
+span{
+    color: hsl(277, 64%, 61%);
+}
+div#info{
+    display: flex;
+    gap: 5px;
+}
+div.group{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+p.down{
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-family: inter;
+}
+div#right{
+    background-image: url(images/image-header-desktop.jpg);
+    background-size: cover;
+    border-radius: 0px 8px 8px 0px;
+    width: 50%;
+    height: 256px;
+}
+div#color{
+    background-color: hsl(277, 64%, 61%, 60%);
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+div.attribution{
+    margin-top: 15px;
+    font-size: 14px;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+@media screen and (max-width: 375px) {
+    section{
+        display: flex;
+        flex-direction: column-reverse;
+        width: auto;
+    }
+    div#left{
+        width: 100%;
+        text-align: center;
+    }
+    div#info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    div.group{
+        display: flex;
+        flex-direction: column;
+    }
+    b#big{
+        width: 215px;
+    }
+    p#note{
+        font-size: 14px;
+        width: 245px;
+    }
+    div#right{
+        width: 100%;
+        background-image: url(images/image-header-mobile.jpg);
+        background-size: cover;
+        border-radius: 10px 10px 0px 0px;
+    }
+}
